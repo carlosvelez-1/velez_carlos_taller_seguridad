@@ -1,0 +1,56 @@
+[
+  {
+    "prueba": "A1-01",
+    "esperado": "misma clave",
+    "obtenido": "misma clave",
+    "estado": "OK"
+  },
+  {
+    "prueba": "A1-02",
+    "esperado": "10 claves distintas",
+    "obtenido": "10 claves distintas",
+    "estado": "OK"
+  },
+  {
+    "prueba": "A1-03",
+    "esperado": "10/10 correctos",
+    "obtenido": "10/10 correctos",
+    "estado": "OK"
+  },
+  {
+    "prueba": "A1-04",
+    "esperado": "no recuperable",
+    "obtenido": "no recuperable",
+    "estado": "OK"
+  },
+  {
+    "prueba": "A2-01",
+    "esperado": "6/6 correctos",
+    "obtenido": "6/6 correctos",
+    "estado": "OK"
+  },
+  {
+    "prueba": "A2-02",
+    "esperado": "rechazado",
+    "obtenido": "rechazado",
+    "estado": "OK"
+  },
+  {
+    "prueba": "A2-03",
+    "esperado": "rechazado",
+    "obtenido": "rechazado",
+    "estado": "OK"
+  },
+  {
+    "prueba": "A2-04",
+    "esperado": "no descifrable",
+    "obtenido": "no descifrable",
+    "estado": "OK"
+  },
+  {
+    "prueba": "A2-05",
+    "esperado": "no descifrable",
+    "obtenido": "no descifrable",
+    "estado": "OK"
+  }
+]
