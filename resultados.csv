@@ -1,0 +1,10 @@
+id_prueba,algoritmo,propiedad,descripcion,esperado,obtenido,estado,comentario
+A1-01,A1,determinismo,Misma cadena e i­ndice producen la misma clave,misma clave,misma clave,OK,Dos derivaciones identicas coinciden; otro indice u otra cadena dan una clave distinta
+A1-02,A1,unicidad,10 claves de mensaje distintas,10 claves distintas,10 claves distintas,OK,"10 indices con derivar_clave y 10 entregas consecutivas de CadenaClaves, todas distintas"
+A1-03,A1,cifrado,Cifrar y descifrar 10 mensajes,10/10 correctos,10/10 correctos,OK,Emisor y receptor avanzan sus cadenas en paralelo desde el mismo secreto
+A1-04,A1,borrado,Clave usada y luego borrada no se recupera,no recuperable,no recuperable,OK,Clave sobrescrita con ceros; con la cadena robada (500 avances x 50 indices) no se reconstruye; control: con la cadena original si se obteni­a
+A2-01,A2,descifrado,Descifrar los 6 mensajes,6/6 correctos,6/6 correctos,OK,"3 mensajes Alice->Bob, 2 Bob->Alice, 1 Alice->Bob, con 2 cambios de direccion"
+A2-02,A2,integridad,Un byte alterado del ciphertext,rechazado,rechazado,OK,AES-GCM detecta la alteracion; el rechazo no modifica el estado y el mensaje original aun se descifra
+A2-03,A2,repeticion,Mensaje reenviado,rechazado,rechazado,OK,4 reenvios rechazados (misma cadena y cadenas viejas); la sesion continua
+A2-04,A2,forward secrecy,Estado robado tras mensaje 3 no descifra mensaje 1,no descifrable,no descifrable,OK,Control: con el estado previo al mensaje 1 si se descifra; tras recibir m3 la clave de m1 ya se borro y la cadena no puede retroceder
+A2-05,A2,post-compromise,Estado robado antes del cambio de direccion no descifra,no descifrable,no descifrable,OK,"Con el estado de Bob previo a su cambio de direccion no se descifran m4, m5 ni m6; control: el estado de Alice si revela m4 y m5 pero no m6 (se cura en su propio cambio de direccion)"
